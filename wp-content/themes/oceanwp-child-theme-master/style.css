@@ -1,0 +1,280 @@
+/*
+Theme Name: OceanWP Child Theme
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress theme. Sample child theme.
+Author: OceanWP
+Author URI: https://oceanwp.org/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Syne', sans-serif;
+}
+
+/* Style de base pour les éléments */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Syne', sans-serif;
+    max-width: 100%;
+  }
+main {
+    max-width: 100%;
+}
+#site-main {
+    max-width: 100%;
+}
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+p {
+    font-size: 20px;
+    color: black;
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+  
+/********** HEADER **********/
+
+#site-logo {
+    margin-left: 37px;
+}
+
+#top-bar-wrap {
+    display: none;
+}
+
+.page-header {
+    display: none;
+}
+
+#site-header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+div#site-header-inner .clr-container {
+    position: absolute;
+}
+.header {
+    width: 100%;
+}
+
+/******** NAVIGATION *********/
+
+ #menu-item-26 a {
+    color: black ;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 30px;
+    padding-bottom: 31px;
+    text-decoration: none;
+  }
+ 
+ #menu-item-25 a {
+    color: white !important;
+    background-color: #DC9F96;
+    font-size: 16px;
+    font-weight: 700;
+    width: 236px;
+    height: 100%;
+    padding-right: 0%;
+ }
+
+/********* FOOTER ********/
+
+#footer-bottom-inner {
+    display: flex;
+    justify-content: center;
+}
+#footer-bottom-menu {
+    display: flex;
+    justify-content: center;
+}
+
+/********** PAGE ACCUEIL **********/
+
+.wp-block-cover {
+    background-color: #ECE2DA; 
+    padding-top: 83px;
+    width: 1307px;
+}
+.wp-block-cover .grille-gouts-class {
+    position: absolute;
+    width: 393px;
+    height: 262px;
+}
+
+.bloc-boisson-class .bordure-class {
+    background-color: #ECE2DA;
+    box-shadow: #E3D9D0 0px 12px 0px 0px;
+    border-radius: 0px 0px 350px 350px / 0px 0px 36px 36px;
+}
+
+.bloc-gouts-class {
+    background-color: #ECE2DA;
+    padding: 58px 311px 29px 312px;
+    box-shadow: #E3D9D0 0px 12px 0px 0px;
+    border-radius: 0px 0px 350px 350px / 0px 0px 36px 36px;
+}
+
+.bloc-energie-class {
+    width: 1440px;
+    height: 415px;
+}
+
+.wp-block-cover .image-gout-class {
+    border-bottom: none;
+    font-family: inherit;
+    color: white !important;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.is-style-outline {
+    width: 198px;
+    height: 55px;
+    border: #E0B9B4;
+}
+
+.bloc-avis-clients {
+    padding: 133px 135px 0 134px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.colonnes-clients {
+    padding: 50px;
+}
+
+h4.wp-block-heading {
+    padding: 50px;
+}
+
+.wp-container-4.wp-container-4 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.bouton-commander {
+    padding: 50px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+.image-container img {
+    display: block;
+    width: 394px;
+    height: auto;
+  }
+  
+.image-container .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: 'Syne', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0%;
+}
+.wp-block-columns {
+    margin: 0%;
+}
+
+/******** FORMULAIRES *********/
+
+.wpcf7-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wpcf7-submit {
+    background-color: #E0B9B4;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.bloc-contact-class {
+    background-color: #E3D9D0;
+    padding-top: 60px;
+}
+input[type=text].wpcf7-text {
+    background-color: #ffffff;
+}
+.wpcf7-textarea {
+    background-color: #ffffff;
+}
+input[type=email].wpcf7-email {
+    background-color: #ffffff;
+}
+
+#wpcf7-f313-p21-o1 {
+    border-right: #ffffff;
+}
+
+#wpcf7-f313-p21-o1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.uacf7-col-12, .uacf7-col-6, .uacf7-col-3, .uacf7-col-4 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+.commande-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/****** PAGE CONTACT ******/
+
+.elementor-19 .elementor-element.elementor-element-8e26568 {
+    box-shadow: #E3D9D0 0px 12px 0px 0px;
+    border-radius: 0px 0px 350px 350px / 0px 0px 36px 36px;
+}
+
+/********* RESPONSIVE **********/
+
