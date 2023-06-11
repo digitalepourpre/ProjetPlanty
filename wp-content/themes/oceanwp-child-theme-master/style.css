@@ -82,6 +82,7 @@ h5 {
     justify-content: center;
     align-items: center;
 }
+
 div#site-header-inner .clr-container {
     position: absolute;
 }
@@ -226,7 +227,6 @@ h4.wp-block-heading {
     align-items: center;
 }
 .wpcf7-submit {
-    background-color: #E0B9B4;
     border-radius: 5px;
     font-size: 15px;
     width: 200px;
@@ -270,6 +270,85 @@ input[type=email].wpcf7-email {
     color: #ffffff;
 }
 
+input[type=number] {
+    display: flex;
+    flex-direction: row;
+    max-width: 50px;
+    padding: 0 0 0 8px;
+    border: white;
+    background-color: white;
+    align-content: center;
+}
+
+.uacf7-form-523 {
+    display: flex;
+    flex-direction: row;
+}
+
+.formulaire-commande {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formulaire-fruit {
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    border-radius: 5px;
+    padding: 0%;
+    height: 56px;
+}
+
+.bouton-class {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    border-color: white;
+    width: 31px;
+    margin: auto;
+    box-shadow: none;
+}
+
+input#quantity {
+    background-color: #ffffff;
+    text-align: center;
+    height: 56px;
+    width: 51px;
+    border-radius: 5px 0 0 5px;
+}
+
+button#plus {
+    border-radius: 0px 5px 0px 0px;
+    background-color: #DC9F96;
+    ;
+}
+button#moins {
+    border-radius: 0px 0px 5px 0px;
+    border-top: #ffffff solid 1px;
+    background-color: #DC9F96;
+}
+
+.ok {
+    color: #ffffff;
+    padding-left: 10px;
+    height: 56px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#bouton-ok {
+    height: 56px;
+}
+.wpcf7-js-icf7s-523 {
+    height: 56px;
+    width: 90px;
+    margin: 0%;
+    padding: 0%;
+}
+
 /****** PAGE CONTACT ******/
 
 .elementor-19 .elementor-element.elementor-element-8e26568 {
@@ -279,3 +358,12 @@ input[type=email].wpcf7-email {
 
 /********* RESPONSIVE **********/
 
+@media screen and (min-width: 780px) and (max-width: 979px){
+.conteneur-flex{
+    flex-flow: row wrap;
+}
+    .sous-conteneur-flex{
+        flex-flow: row wrap;
+        margin: 0px 10px;
+    }
+}
