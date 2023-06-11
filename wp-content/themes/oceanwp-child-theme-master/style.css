@@ -234,6 +234,7 @@ h4.wp-block-heading {
     justify-content: center;
     padding-bottom: 50px;
 }
+
 .bloc-contact-class {
     background-color: #E3D9D0;
     padding-top: 60px;
@@ -261,8 +262,8 @@ input[type=email].wpcf7-email {
 .uacf7-col-12, .uacf7-col-6, .uacf7-col-3, .uacf7-col-4 {
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 50px;
 }
+
 .commande-title {
     font-size: 25px;
     font-weight: 700;
