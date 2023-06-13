@@ -21,10 +21,8 @@
  */
 
 function oceanwp_child_enqueue_parent_style() {
-    // Load the parent stylesheet first
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     
-    // Load the child stylesheet
     wp_enqueue_style('child-style', get_stylesheet_uri(), array('parent-style'));
 }
 
