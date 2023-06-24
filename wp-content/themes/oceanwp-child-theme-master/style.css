@@ -15,51 +15,59 @@ Version: 1.0
 * {
     font-family: 'Syne', sans-serif;
 }
+#footer a.lien-admin {
+    display: none;
+    visibility: hidden;
+}
+#footer-bottom #footer-bottom-menu li:after {
+    display: none;
+    visibility: hidden;
+}
 
+@media screen and (min-width: 1024px) {   
 /* Style de base pour les éléments */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Syne', sans-serif;
     max-width: 100%;
-  }
+}
 main {
     max-width: 100%;
 }
 #site-main {
     max-width: 100%;
 }
-  .container {
+.container {
     max-width: 100%;
     margin: 0 auto;
     padding: 1.25em;
-  }
-
+}
 p {
     font-size: 1.25em;
     color: black;
 }
-
 h2 {
     font-size: 2.275em;
     font-weight: 800;
 }
-
 h3 {
     font-size: 1.875em;
     font-weight: 800;
 }
-
 h4 {
     font-size: 1.875em;
     font-weight: 700;
 }
-
 h5 {
     font-size: 1.25em;
     font-weight: 700;
 }
-  
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 /********** HEADER **********/
 
 #site-logo {
@@ -251,11 +259,74 @@ input[type=email].wpcf7-email {
     background-color: #ffffff;
 }
 
-#wpcf7-f313-p21-o1 {
-    border-right: #ffffff;
+/******** PAGE COMMANDE *********/
+
+/* rassemble les deux parties du formulaire */
+.formulaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
+/* ensemble des formulaires de quantité */
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* formulaire de commande pour un fruit */
+.formulaire-commande {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 10px 20px 10px;
+}
+
+/* image des fruits */
+.formulaire-image {
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* texte des fruits */
+.centrer {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    left: 15%;
+    right: 15%;
+}
+
+/* deuxieme partie de formulaire */
+.formulaire-informations {
+    padding-top: 50px;
+}
+
+/* bordure entre les deux formulaires */
+.uacf7-row {
+    border-top: #ffffff solid 1px;
+    padding-top: 50px;
+}
+
+/* bordure du milieu */
 #wpcf7-f313-p21-o1 {
+    border-right: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -287,12 +358,6 @@ input[type=number] {
     flex-direction: row;
 }
 
-.formulaire-commande {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .formulaire-fruit {
     display: flex;
     flex-direction: row;
@@ -308,7 +373,7 @@ input[type=number] {
     color: #ffffff;
     border-color: white;
     width: 31px;
-    margin: auto;
+    margin: 0;
     box-shadow: none;
 }
 
@@ -323,12 +388,13 @@ input#quantity {
 button#plus {
     border-radius: 0px 5px 0px 0px;
     background-color: #DC9F96;
-    ;
+    width: 31px;
 }
 button#moins {
     border-radius: 0px 0px 5px 0px;
     border-top: #ffffff solid 1px;
     background-color: #DC9F96;
+    width: 31px;
 }
 
 .ok {
@@ -341,9 +407,11 @@ button#moins {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 #bouton-ok {
     height: 56px;
 }
+
 .wpcf7-js-icf7s-523 {
     height: 56px;
     width: 90px;
@@ -353,9 +421,146 @@ button#moins {
 
 /****** PAGE CONTACT ******/
 
+#text {
+    padding-top: 24px;
+    max-width: max-content;
+}
+
 .elementor-19 .elementor-element.elementor-element-8e26568 {
     box-shadow: #E3D9D0 0px 12px 0px 0px;
     border-radius: 0px 0px 350px 350px / 0px 0px 36px 36px;
 }
+}
 
-/*------------------------------------* RESPONSIVE *------------------------------------*/
+/***************** RESPONSIVE *****************/
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    .commande-title {
+        color: #ffffff !important;
+        font-size: 18px;
+    }
+    #wpcf7-f313-p21-o1 {
+        border-bottom: white !important;
+    }
+    .wpcf7-text {
+        font-size: 15px;
+    }
+    #wpcf7-f313-p21-o1 {
+        border-bottom: #ffffff solid 1px;
+        }
+    .uacf7-col-6 {
+            padding-top: 30px;
+        }
+    .formulaire-informations {
+        border-top: #ffffff solid 1px;
+        padding-top: 30px;
+    }
+    .formulaire {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .formulaire-image {
+        max-width: 100%;
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .formulaire-commande {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .formulaire-fruit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 0%;
+        height: 56px;
+        flex-wrap: wrap;
+    }
+    .centrer {
+        position: absolute;
+        font-size: 15px;
+        font-weight: 800;
+        color: white;
+        text-align: center;
+        left: 40%;
+        right: 40%;
+    }
+    .bouton-class {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        border-color: white;
+        max-width: 31px;
+        box-shadow: none;
+        height: fit-content;
+    }
+    input#quantity {
+        background-color: #ffffff;
+        text-align: center;
+        height: 56px;
+        width: 51px;
+        border-radius: 5px 0 0 5px;
+    }
+    button#plus {
+        border-radius: 0px 5px 0px 0px;
+        background-color: #DC9F96;
+        height: 28px;
+        width: 31px;
+    }
+    button#moins {
+        border-radius: 0px 0px 5px 0px;
+        border-top: #ffffff solid 1px;
+        background-color: #DC9F96;
+        height: 28px;
+        width: 31px;
+    }
+    .ok {
+        color: #ffffff;
+        height: 56px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #bouton-ok {
+        height: 56px;
+        width: 88px;
+    }
+    img {
+        width: 50%;
+    }
+    #footer a.lien-admin {
+    display: none;
+    visibility: hidden;
+    }
+    #footer-bottom #footer-bottom-menu li:after {
+    display: none;
+    visibility: hidden;
+    }  
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .centrer {
+        font-size: 8px;
+    }
+    .com-form-1 {
+        border-bottom: #ffffff solid 1px;
+        padding-bottom: 15px;
+    }
+}

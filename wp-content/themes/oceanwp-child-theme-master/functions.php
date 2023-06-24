@@ -29,19 +29,14 @@ function oceanwp_child_enqueue_parent_style() {
 add_action('wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style');
 
 function add_admin_link_to_menu($items, $args) {
-    // Vérifie si l'utilisateur est connecté
     if (is_user_logged_in()) {
-        // Crée le lien "admin"
-        $admin_link = '<li><a href="' . admin_url() . '">Admin</a></li>';
+        $admin_link = '<li><a href="http://localhost:8888/Projet-Planty/" class="lien-admin">Admin</a></li>';
 
-        // Trouve l'index de l'élément du menu où vous souhaitez insérer le lien "admin"
         $menu_items = explode('</li>', $items);
         $index_to_insert = floor(count($menu_items) / 2);
 
-        // Insère le lien "admin" à l'index spécifié
         array_splice($menu_items, $index_to_insert, 0, $admin_link);
 
-        // Réassemble les éléments du menu
         $items = implode('</li>', $menu_items);
     }
 
